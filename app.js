@@ -35,10 +35,10 @@ var weapons = [
 ];
 
 for (var i = 0; i < 100; i++) {
-    function displayAccusation() {
-        var index = i;
-      function createAccusation() {
-          alert(
+  function displayAccusation() {
+    var index = i;
+    function createAccusation() {
+      alert(
         "I accuse " +
           friends[index % friends.length] +
           " in the " +
@@ -46,12 +46,12 @@ for (var i = 0; i < 100; i++) {
           " with the " +
           weapons[index % weapons.length] +
           "!"
-          );
-      };
-      return createAccusation;
+      );
     }
+    return createAccusation;
+  }
 
-    var accusationClicked = displayAccusation();
+  var accusationClicked = displayAccusation();
   var accusation = document.createElement("h3");
   var accusationTitle = document.createTextNode("Accusation " + (i + 1));
   accusation.appendChild(accusationTitle);
