@@ -35,6 +35,15 @@ var weapons = [
 ];
 
 for (var i = 0; i < 100; i++) {
+  var accusationClicked = displayAccusation();
+  
+  var accusation = document.createElement("h3");
+  var accusationTitle = document.createTextNode("Accusation " + (i + 1));
+  accusation.appendChild(accusationTitle);
+  document.body.appendChild(accusation);
+  accusation.addEventListener("click", accusationClicked);
+  accusation.style.cursor = "pointer";
+
   function displayAccusation() {
     var index = i;
     function createAccusation() {
@@ -50,12 +59,4 @@ for (var i = 0; i < 100; i++) {
     }
     return createAccusation;
   }
-
-  var accusationClicked = displayAccusation();
-  var accusation = document.createElement("h3");
-  var accusationTitle = document.createTextNode("Accusation " + (i + 1));
-  accusation.appendChild(accusationTitle);
-  document.body.appendChild(accusation);
-  accusation.addEventListener("click", accusationClicked);
-  accusation.style.cursor = "pointer";
 }
